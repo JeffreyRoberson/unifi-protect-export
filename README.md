@@ -9,8 +9,13 @@ This was intended to run on the local Protect UNVR.  Some Debian pakcages will n
 
 The output was sent to a CIFS mount point for archiving.  
 To create a CIFS mountpoint follow these steps
+
 sudo apt install smbclient
+
+sudo apt install cifs-utils
+
 sudo mkdir /mnt/video
+
 sudo mount.cifs -o sec=ntlmssp,username=USERNAME //PC_NAME/SHARE /mnt/video
 
 Minor adjustments need to be made to the file.  The MAC address of the camera to export is on line 12 of the file.  The MAC address is without colon's. (:)
